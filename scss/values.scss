@@ -1,0 +1,68 @@
+$fontMain: "Geometria";
+
+$colorWhite: rgba(255, 255, 255, 1);
+$colorWhite-a6: rgba(255, 255, 255, 0.6);
+$colorWhite-a5: rgba(255, 255, 255, 0.5);
+
+$colorBlack: rgba(0, 0, 0, 1); // #333
+$colorBlack-a9: rgba(0, 0, 0, 0.9); // #333
+
+$colorRed: rgba(229, 0, 5, 1); // #E50005
+$colorGray: rgba(140, 140, 140, 1); // #8c8c8c
+
+$responsive1439: "1439px";
+$responsive1279: "1279px";
+$responsive991: "991px";
+$responsive767: "767px";
+$responsive559: "559px";
+$responsive479: "479px";
+
+// @media responsive
+
+@mixin responsiveMinWidth1280 {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin responsiveMinWidth768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin responsive1439 {
+  @media (max-width: $responsive1439) {
+    @content;
+  }
+}
+
+@mixin responsive1279 {
+  @media (max-width: $responsive1279) {
+    @content;
+  }
+}
+
+@mixin responsive991 {
+  @media (max-width: $responsive991) {
+    @content;
+  }
+}
+
+@mixin responsive767 {
+  @media (max-width: $responsive767) {
+    @content;
+  }
+}
+
+@mixin responsive559 {
+  @media (max-width: $responsive559) {
+    @content;
+  }
+}
+
+@mixin responsive479 {
+  @media (max-width: $responsive479) {
+    @content;
+  }
+}
