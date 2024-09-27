@@ -1234,6 +1234,7 @@ h2.caption {
       height: 652px;
       opacity: 0.1;
       transition: opacity 0.3s;
+      @include invisLink;
 
       @include responsive1279 {
         height: 480px;
