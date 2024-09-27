@@ -167,41 +167,53 @@
     background: transparent;
     border: 0;
     outline: none;
-    border-bottom: solid 1px #cbcbcb;
-    height: 44px;
+    backdrop-filter: blur(13px);
+    background-color: rgba(255, 255, 255, 0.18);
+    height: 54px;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
+    padding: 0 25px;
+    border-radius: 7px;
+    color: $colorWhite;
 
     @include responsive1279 {
       font-size: 12px;
       line-height: 14px;
     }
 
+    @include responsive767 {
+      height: 50px;
+    }
+
     &::placeholder {
-      color: $colorBlack;
+      color: $colorWhite;
     }
   }
 
   textarea {
+    resize: none;
     background: transparent;
     border: 0;
     outline: none;
-    border: solid 1px #cbcbcb;
-    height: 149px;
+    backdrop-filter: blur(13px);
+    background-color: rgba(255, 255, 255, 0.18);
+    height: 135px;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
-    padding: 10px;
+    border-radius: 7px;
+    color: $colorWhite;
+    padding: 10px 25px;
 
     @include responsive1279 {
       font-size: 12px;
       line-height: 14px;
-      height: 62px;
+      height: 100px;
     }
 
     &::placeholder {
-      color: $colorBlack;
+      color: $colorWhite;
     }
   }
 }
@@ -294,5 +306,48 @@
       display: block;
       object-fit: cover;
     }
+  }
+}
+
+.swiperBtnPrev.black {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  margin-top: -15px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.9492 1L2 10.9492L11.9492 20.8984' stroke='black' stroke-width='2'/%3e%3c/svg%3e ");
+
+  @include responsive1279 {
+    left: -35px;
+  }
+
+  @include responsive767 {
+    background-size: 8px;
+    left: -25px;
+  }
+}
+
+.swiperBtnNext.black {
+  position: absolute;
+  left: auto;
+  right: -50px;
+  top: 50%;
+  margin-top: -15px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.00004 1L10.9492 10.9492L1.00004 20.8984' stroke='black' stroke-width='2'/%3e%3c/svg%3e ");
+
+  @include responsive1279 {
+    right: -35px;
+  }
+
+  @include responsive767 {
+    background-size: 8px;
+    right: -25px;
   }
 }

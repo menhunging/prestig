@@ -129,6 +129,107 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".special-offers__slider").length > 0) {
+    const swiperTypes = new Swiper(".special-offers__slider", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      loop: true,
+      watchSlidesProgress: true,
+      navigation: {
+        prevEl: ".special-offers__slider .swiperBtnPrev",
+        nextEl: ".special-offers__slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1280: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
+
+  if ($(".documents__slider").length > 0) {
+    const swiperTypes = new Swiper(".documents__slider", {
+      slidesPerView: 3,
+      spaceBetween: 60,
+      centeredSlides: true,
+      initialSlide: 2,
+      watchSlidesProgress: true,
+      navigation: {
+        prevEl: ".documents__slider .swiperBtnPrev",
+        nextEl: ".documents__slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+        },
+      },
+    });
+  }
+
+  if ($(".reviews-services__slider").length > 0) {
+    const swiperTypes = new Swiper(".reviews-services__slider", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      watchSlidesProgress: true,
+      navigation: {
+        prevEl: ".reviews-services__slider .swiperBtnPrev",
+        nextEl: ".reviews-services__slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   // if ($(".products-slider").length > 0) {
   //   let destroySliderProducts = () => {};
 

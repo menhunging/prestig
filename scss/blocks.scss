@@ -758,4 +758,707 @@ h2.caption {
 
 .turnkey-panel {
   padding: 80px 0;
+
+  @include responsive767 {
+    padding: 30px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 60px;
+    margin-top: 50px;
+
+    @include responsive1439 {
+      gap: 60px 40px;
+    }
+
+    @include responsive1279 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive991 {
+      gap: 30px 20px;
+    }
+
+    @include responsive559 {
+      grid-template-columns: 1fr;
+      margin-top: 25px;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #000;
+
+    @include responsive991 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &--special {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 26px;
+      text-align: center;
+      background-color: $colorRed;
+      grid-column: 2/4;
+      color: $colorWhite;
+      padding: 30px 44px;
+      margin-top: -30px;
+
+      @include responsive1279 {
+        grid-column: 2/3;
+      }
+
+      @include responsive991 {
+        grid-column: 1/3;
+        left: -20px;
+        position: relative;
+        width: calc(100% + 40px);
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 25px 10px;
+      }
+
+      @include responsive559 {
+        grid-column: 1/2;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $colorRed;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+    display: block;
+
+    @include responsive991 {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__li {
+    position: relative;
+
+    span {
+      position: relative;
+      padding-left: 10px;
+
+      @include before {
+        width: 4px;
+        height: 4px;
+        background-color: $colorRed;
+        border-radius: 50%;
+        top: 10px;
+        left: 0;
+
+        @include responsive559 {
+          top: 7px;
+        }
+      }
+    }
+  }
+}
+
+.commercial-offer {
+  width: 100%;
+  height: 680px;
+
+  @include responsive991 {
+    height: 480px;
+  }
+
+  @include responsive767 {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  &--form {
+    height: auto;
+
+    @include responsive767 {
+      padding-bottom: 0;
+    }
+
+    .caption {
+      font-size: 65px;
+      line-height: 82px;
+
+      @include responsive1279 {
+        font-size: 55px;
+        line-height: 72px;
+      }
+
+      @include responsive991 {
+        font-size: 45px;
+        line-height: 60px;
+      }
+
+      @include responsive559 {
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+
+    picture {
+      filter: blur(5px);
+    }
+
+    .commercial-offer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      @include responsive1279 {
+        align-items: flex-start;
+      }
+    }
+
+    .commercial-offer__mobile {
+      display: none !important;
+    }
+
+    .commercial-offer__media {
+      &::before {
+        @include responsive767 {
+          height: 115px !important;
+        }
+      }
+
+      picture {
+        top: 100px !important;
+        width: calc(100% + 40px) !important;
+        height: 100% !important;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    padding: 100px 0;
+    color: $colorWhite;
+
+    @include responsive991 {
+      padding: 80px 0;
+    }
+
+    @include responsive767 {
+      padding: 40px 0;
+    }
+
+    @include responsive767 {
+      padding: 30px 0;
+    }
+  }
+
+  &__content {
+    max-width: 410px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include responsive991 {
+      max-width: 320px;
+      gap: 10px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      max-width: 100%;
+      font-size: 13px;
+      line-height: 18px;
+      gap: 5px;
+
+      .btn {
+        display: none;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    margin-top: 230px;
+
+    .btn {
+      width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    @include responsive767 {
+      display: block;
+    }
+  }
+
+  .text-request {
+    background-color: $colorRed;
+    color: $colorWhite;
+    padding: 0px 5px;
+    display: inline-block;
+    border-radius: 15px;
+    line-height: 25px;
+
+    @include responsive767 {
+      line-height: 20px;
+    }
+  }
+
+  .caption {
+  }
+
+  .desc {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-left: auto;
+    margin-top: -25px;
+    color: #b4b4b4;
+    margin-right: 105px;
+    margin-bottom: 30px;
+
+    @include responsive991 {
+      margin-top: -15px;
+    }
+
+    @include responsive767 {
+      margin-top: -5px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 382px;
+
+    @include responsive991 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include responsive767 {
+    }
+  }
+
+  .commercial-offer__media {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @include before {
+      background-color: #2e2e2e;
+      left: calc(-20% - 200px);
+      top: 0;
+      width: 70%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+      transform: skewX(-15deg);
+
+      @include responsive1439 {
+        width: 60%;
+        left: calc(-20% - 71px);
+      }
+
+      @include responsive1279 {
+        width: 85%;
+        left: calc(-20% - 121px);
+      }
+
+      @include responsive991 {
+      }
+
+      @include responsive767 {
+        width: 100%;
+        transform: initial;
+        left: -20px;
+        width: calc(100% + 40px);
+      }
+
+      @include responsive559 {
+      }
+    }
+
+    picture {
+      position: absolute;
+      right: -350px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      @include responsive991 {
+        right: -210px;
+      }
+
+      @include responsive767 {
+        right: auto;
+        left: -20px;
+        top: 100%;
+        width: calc(100% + 40px);
+        height: 210px;
+      }
+    }
+
+    picture {
+      img {
+      }
+    }
+  }
+}
+
+.special-offers {
+  padding: 30px 0;
+
+  @include responsive991 {
+    padding: 70px 0;
+  }
+
+  .special-offers__slider {
+    margin-top: 40px;
+    overflow: visible;
+
+    @include responsive1439 {
+      max-width: 90%;
+    }
+
+    @include responsive991 {
+      margin-top: 30px;
+    }
+
+    @include responsive767 {
+    }
+
+    .swiper-slide {
+      position: relative;
+      @include invisLink;
+      opacity: 1;
+      transition: all 0.3s;
+      padding-top: calc(159 / 500 * 100%);
+      height: auto;
+
+      @include responsive767 {
+        opacity: 0 !important;
+        padding-top: calc(320 / 500 * 100%);
+      }
+
+      .site-media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        picture {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &.swiper-slide-visible {
+        @include responsive767 {
+          opacity: 1 !important;
+        }
+      }
+
+      &.swiper-slide-prev,
+      &.swiper-slide-next + .swiper-slide {
+        opacity: 0;
+
+        @include responsive767 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.documents {
+  padding: 30px 0;
+
+  .desc {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+  }
+
+  &__slider {
+    margin-top: 40px;
+    overflow: visible;
+
+    @include responsive1439 {
+      max-width: 90%;
+    }
+
+    @include responsive1279 {
+      margin-top: 30px;
+    }
+
+    @include responsive767 {
+    }
+
+    .swiper-slide {
+      position: relative;
+      height: 652px;
+      opacity: 0.1;
+      transition: opacity 0.3s;
+
+      @include responsive1279 {
+        height: 480px;
+      }
+
+      @include responsive767 {
+        height: auto;
+        padding-top: calc(415 / 300 * 100%);
+      }
+
+      &.swiper-slide-visible {
+        opacity: 1;
+      }
+
+      &.swiper-slide-active {
+        .site-media {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          transform: translate(0%, 0%);
+          border-color: $colorRed;
+        }
+      }
+
+      .site-media {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 342px;
+        height: 485px;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s;
+        border: solid 1px #bababa;
+
+        @include responsive1279 {
+          width: 280px;
+          height: 350px;
+        }
+
+        picture {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+
+          img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reviews-services {
+  padding: 30px 0 60px;
+
+  @include responsive767 {
+    padding-bottom: 30px;
+  }
+
+  &__slider {
+    overflow: visible;
+    margin-top: 70px;
+    width: 100%;
+
+    @include responsive1439 {
+      max-width: 90%;
+    }
+
+    @include responsive767 {
+      margin-top: 40px;
+    }
+
+    .swiper-slide {
+      background-color: #f8f8f8;
+      padding: 0 24px;
+      opacity: 0.5;
+      filter: grayscale(1);
+      transition: all 0.3s;
+
+      @include responsive767 {
+        padding: 0 10px;
+      }
+
+      &.swiper-slide-visible {
+        opacity: 1;
+        filter: grayscale(0);
+      }
+    }
+
+    .reviews-item {
+      position: relative;
+      padding-bottom: 60px;
+
+      @include responsive991 {
+        padding-bottom: 30px;
+      }
+
+      @include before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='53' height='33' viewBox='0 0 53 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M38.5 -4.76837e-06H52.6L43.6 32.8H25.6L38.5 -4.76837e-06ZM13.4 -4.76837e-06H27.5L18.5 32.8H0.5L13.4 -4.76837e-06Z' fill='%23E50005'/%3e%3c/svg%3e ");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 54px;
+        background-size: contain;
+        left: -14px;
+        top: -30px;
+
+        @include responsive1279 {
+          width: 30px;
+          height: 30px;
+          background-size: contain;
+        }
+
+        @include responsive991 {
+          top: -15px;
+        }
+
+        @include responsive767 {
+          left: -10px;
+          top: -10px;
+        }
+      }
+
+      @include after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='53' height='33' viewBox='0 0 53 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M38.5 -4.76837e-06H52.6L43.6 32.8H25.6L38.5 -4.76837e-06ZM13.4 -4.76837e-06H27.5L18.5 32.8H0.5L13.4 -4.76837e-06Z' fill='%23E50005'/%3e%3c/svg%3e ");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 54px;
+        background-size: contain;
+        right: 14px;
+        bottom: -25px;
+
+        @include responsive1279 {
+          width: 30px;
+          height: 30px;
+          background-size: contain;
+        }
+
+        @include responsive991 {
+          bottom: -15px;
+        }
+      }
+    }
+    .name {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 25px;
+      text-transform: uppercase;
+      border-radius: 0px 0px 30px 30px;
+      background-color: $colorWhite;
+      padding: 39px 25px 20px;
+      min-height: 110px;
+      display: flex;
+      padding-right: 30%;
+      margin-bottom: 38px;
+
+      @include responsive1279 {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 30px 15px 15px;
+        border-radius: 0px 0px 20px 20px;
+        min-height: initial;
+        margin-bottom: 20px;
+      }
+
+      @include responsive767 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .content {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include responsive1279 {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+.commercial-form {
+  width: 521px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  @include responsive991 {
+    width: 410px;
+  }
+
+  @include responsive767 {
+    margin-top: 70px;
+    width: 100%;
+  }
+
+  .input-item {
+    width: 100%;
+  }
+
+  .btn {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 265px;
+
+    @include responsive767 {
+      margin-top: 0;
+    }
+  }
 }
