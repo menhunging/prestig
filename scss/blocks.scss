@@ -1133,6 +1133,10 @@ h2.caption {
     padding: 70px 0;
   }
 
+  @include responsive767 {
+    padding: 30px 0;
+  }
+
   .special-offers__slider {
     margin-top: 40px;
     overflow: visible;

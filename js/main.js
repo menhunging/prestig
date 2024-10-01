@@ -62,7 +62,7 @@ $(document).ready(function () {
 
     swiperTypes.on("slideChange", function () {
       $(".slider-type__item").removeClass("active");
-      $(".slider-type__item").eq(this.activeIndex).addClass("active");
+      $(".slider-type__item").eq(this.realIndex).addClass("active");
 
       $(".slider-type__invis").removeClass("opened");
       $(document).off("mouseup");
@@ -227,6 +227,21 @@ $(document).ready(function () {
           spaceBetween: 20,
         },
       },
+    });
+  }
+
+  if ($("[data-anhor]").length > 0) {
+    $("[data-anhor]").on("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        const hash = this.hash;
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          400
+        );
+      }
     });
   }
 });
