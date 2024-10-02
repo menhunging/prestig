@@ -244,4 +244,34 @@ $(document).ready(function () {
       }
     });
   }
+
+  if ($(".modal").length > 0) {
+    MicroModal.init({
+      openTrigger: "data-modal",
+      onShow: () => {
+        $("body").addClass("modal-open");
+      },
+      onClose: () => {
+        $("body").removeClass("modal-open");
+      },
+    });
+
+    $("[data-modal]").map(function () {
+      $(this).click((e) => {
+        e.preventDefault();
+        $("body").addClass("modal-open");
+      });
+    });
+
+    $("[data-micromodal-close]").map(function () {
+      $(this).click((e) => {
+        // e.preventDefault();
+        if ($(this).attr("data-modal")) {
+          setTimeout(() => {
+            $("body").addClass("modal-open");
+          }, 0.1);
+        }
+      });
+    });
+  }
 });
